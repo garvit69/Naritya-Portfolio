@@ -28,7 +28,7 @@
                 font-size: 24px;
             }
             
-            #myVideo {
+            #myVideo video{
                 position: absolute;
                 right: 0;
                 bottom: 0;
