@@ -6,10 +6,27 @@
 <head>
     <meta charset="utf-8" />
     <title>Naritya Choudhary | Contact</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/19467/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            });
+        }
+    </script>
     <meta content="Contact" property="og:title" />
     <meta content="Contact" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
+
     <link href="https://assets.website-files.com/5fc45fe4377fbe7a33caf0fe/css/foliospec.webflow.7230c655d.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style2.css">
     <style>
@@ -114,9 +131,9 @@
             <div class="w-layout-grid contact">
                 <h2 data-w-id="c1b8db70-4366-bbd0-a2f8-83dd2c359806" class="contact-heading">Let&#x27;s make something together!</h2>
                 <div class="form-block w-form">
-                    <form id="email-form" name="email-form" data-name="Email Form"><input type="text" class="form-field w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Your Full Name " id="Full-Name" required="" /><input type="email" class="form-field w-input" maxlength="256" name="Email"
-                            data-name="Email" placeholder="Your Email" id="Email" required="" /><textarea placeholder="Your Message..." maxlength="5000" id="Message" name="Message" data-name="Message" required="" class="form-field message w-input"></textarea><input
-                            type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button" /></form>
+                    <form id="myForm" name="email-form" data-name="Email Form"><input type="text" class="form-field w-input" maxlength="256" name="Full-Name" data-name="Full Name" placeholder="Your Full Name " id="Full-Name" required="" /><input type="email" class="form-field w-input" maxlength="256" name="Email"
+                            data-name="Email" placeholder="Your Email" id="Email" required="" /><textarea placeholder="Your Message..." maxlength="5000" id="Message" name="Message" data-name="Message" required="" class="form-field message w-input"></textarea>
+                        <input name="submit" type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button" onclick="SubForm()" /></form>
                     <div class="success-message w-form-done">
                         <div class="text-block">Thank you! Your submission has been received!</div>
                     </div>
