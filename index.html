@@ -213,6 +213,75 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        
+        .demo:hover {
+            opacity: .5;
+        }
+        
+        .demo {
+            padding-top: 60px;
+        }
+        
+        .demo span {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 30px;
+            height: 55px;
+            margin-left: -15px;
+            border: 2px solid black;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+        
+        .demo span::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: black;
+            border-radius: 100%;
+            -webkit-animation: sdb10 2s infinite;
+            animation: sdb10 2s infinite;
+            box-sizing: border-box;
+        }
+        
+        @-webkit-keyframes sdb10 {
+            0% {
+                -webkit-transform: translate(0, 0);
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                -webkit-transform: translate(0, 20px);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes sdb10 {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                transform: translate(0, 20px);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
     <script type="text/javascript">
         ! function(o, c) {
@@ -220,6 +289,15 @@
                 t = " w-mod-";
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
+
+        $(function() {
+            $('a[href*=#]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500, 'linear');
+            });
+        });
     </script>
     <link href="FAVICONNC.png" rel="shortcut icon" type="image/x-icon" />
     <link href="FAVICONNC.png" rel="apple-touch-icon" />
@@ -311,7 +389,19 @@
 
                     <h1> Selected Works | 2018-2021.</h1>
                 </div> -->
-
+                <a href="#" class="demo" style=" position: absolute;
+                bottom: 0px;
+                left: 50%;
+                z-index: 2;
+                display: inline-block;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                color: black;
+                font : normal 400 20px/1 'Josefin Sans', sans-serif;
+                letter-spacing: .1em;
+                text-decoration: none;
+                cursor: none;
+                transition: opacity .3s;"><span></span></a>
             </div>
             <div class="collection-list-wrapper w-dyn-list">
                 <div role="list" class="w-dyn-items">
