@@ -220,15 +220,28 @@
         
         .demo {
             padding-top: 60px;
+            position: absolute;
+            bottom: 0px;
+            left: 51%;
+            z-index: 2;
+            display: inline-block;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            color: black;
+            font: normal 400 20px/1 'Josefin Sans', sans-serif;
+            letter-spacing: .1em;
+            text-decoration: none;
+            cursor: none;
+            transition: opacity .3s;
         }
         
         .demo span {
             position: absolute;
             top: 10px;
-            left: 50%;
+            left: 55%;
             width: 30px;
             height: 55px;
-            margin-left: -15px;
+            margin-left: 0px;
             border: 2px solid black;
             border-radius: 50px;
             box-sizing: border-box;
@@ -280,6 +293,12 @@
             }
             100% {
                 opacity: 0;
+            }
+        }
+        
+        @media only screen and (max-width: 1694px) {
+            .demo {
+                display: none;
             }
         }
     </style>
@@ -389,34 +408,11 @@
 
                     <h1> Selected Works | 2018-2021.</h1>
                 </div> -->
-                <a href="#" class="demo" style=" position: absolute;
-                bottom: 0px;
-                left: 50%;
-                z-index: 2;
-                display: inline-block;
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-                color: black;
-                font : normal 400 20px/1 'Josefin Sans', sans-serif;
-                letter-spacing: .1em;
-                text-decoration: none;
-                cursor: none;
-                transition: opacity .3s;"><span></span></a>
+                <a href="#" class="demo"><span></span></a>
             </div>
             <div class="collection-list-wrapper w-dyn-list">
                 <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="collection-item w-dyn-item">
-                        <a data-w-id="713e1c69-0e67-2bfe-25b2-e35f24b25e81" style="opacity:0" href="./projects/hexagrid.html" class="project-link w-inline-block">
-                            <div class="project-image projectimg">
-                                <div class="project-title-contain">
-                                    <div class="word-wrap">
-                                        <h2 data-w-id="b6046dbe-ce2e-e838-eae4-b3dbe88f69c7" class="project-heading">Hexa Grid. </h2>
-                                    </div>
-                                    <h5 class="project-type">Residential </h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
                     <div role="listitem" class="collection-item w-dyn-item">
                         <a data-w-id="713e1c69-0e67-2bfe-25b2-e35f24b25e81" style="opacity:0" href="./projects/austere presence.html" class="project-link w-inline-block">
                             <div class="project-image projectimg2">
@@ -486,6 +482,18 @@
                                         <h2 data-w-id="b6046dbe-ce2e-e838-eae4-b3dbe88f69c7" class="project-heading" style="margin-bottom: 25px;">Buoyant on the Bog.</h2>
                                     </div>
                                     <h5 class="project-type">Public space/cultural</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div role="listitem" class="collection-item w-dyn-item">
+                        <a data-w-id="713e1c69-0e67-2bfe-25b2-e35f24b25e81" style="opacity:0" href="./projects/hexagrid.html" class="project-link w-inline-block">
+                            <div class="project-image projectimg">
+                                <div class="project-title-contain">
+                                    <div class="word-wrap">
+                                        <h2 data-w-id="b6046dbe-ce2e-e838-eae4-b3dbe88f69c7" class="project-heading">Hexa Grid. </h2>
+                                    </div>
+                                    <h5 class="project-type">Residential </h5>
                                 </div>
                             </div>
                         </a>
