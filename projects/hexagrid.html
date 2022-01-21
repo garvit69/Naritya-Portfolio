@@ -107,6 +107,44 @@
             scrollbar-width: none;
             /* Firefox */
         }
+        
+        .loader {
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            display: block;
+            transition: .4s;
+            background-color: #fbfbfb;
+        }
+        
+        .loader video {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            margin: auto;
+        }
+        
+        @media only screen and (max-width: 1400px) {
+            .loader video {
+                position: absolute;
+                top: 48%;
+                left: 50%;
+                width: 50%;
+                margin: auto;
+            }
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .loader video {
+                width: 90%;
+            }
+        }
     </style>
     <script type="text/javascript">
         ! function(o, c) {
@@ -121,7 +159,7 @@
 
 <body>
     <div class="loader" id="loader">
-        <img src="../load.gif">
+        <video autoplay muted loop src="../Untitled.mp4"></video>
     </div>
     <div class="cursor"></div>
     <div class="left-nav-bar">
@@ -211,7 +249,9 @@
                     <div class="project-detail">-Residential </div>
                     <div class="project-detail">-2019</div>
                     <div class="project-detail">-3rd sem studio</div><span class="project-detail">-cubism/prague/co-living/revival</span></div> <img loading="lazy" style="opacity:0" data-w-id="52500514-cf87-07c0-4427-b9f8db1a03a9" src="1.jpg" alt="" sizes="(max-width: 579px) 79vw, (max-width: 867px) 74vw, (max-width: 1091px) 59vw, 78vw"
-                    class="project-homepage img2" /></div>
+                    class="project-homepage img2" />
+
+            </div>
         </div>
     </div>
     <div class="section next-project wf-section"><a data-w-id="e6b50a53-5670-d73b-e86e-fd22da9b78e9" style="opacity:0" href="cerebral.html" class="bottom-link">next<br/><span class="small-bottom-link-text">Project</span></a></div>
